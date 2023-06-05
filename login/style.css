@@ -3,27 +3,43 @@
     margin: 0;
     box-sizing: border-box;
  }
+
+ body{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-image: url(images/1.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    height: 95vh; 
+    font-family: cursive;
+ }
  
- form{
+
+.container{
+    background: radial-gradient(rgba(255,255,255,0.6));
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    width: 320px;
+    height: 390px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+form{
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.main-container{
-    display: flex;
-    justify-content: center;
-    /* border: 2px solid #000; */
-}
 
-.container{
-    position: absolute;
-    background: transparent;
-    min-width: 250px;
-    border: 2px solid #000;
-    border-radius: 8px;
-    padding: 20px;
-    top: 30%;
+img{
+    height: 100px;
+    width: 100px;
+    margin-top: -65px;
+    margin-left: 31%;
 }
 
 h1{
@@ -43,10 +59,17 @@ input{
     border: none;
     background: transparent;
     border-bottom: 2px solid #fff;
+    transition: .3s ease-in-out;
+    width: 90%;
+}
+
+input:hover{
+    border-bottom: solid #000;
 }
 
 ::placeholder{
     color: #000;
+    font-family: cursive;
 }
 
 input:focus{
@@ -59,6 +82,22 @@ input:focus{
     border: none;
     color: #fff;
     border-radius: 5px;
-    padding: 5px 10px;
-    margin: 25px;
+    padding: 6px 16px;
+    margin: 40px 60px;
+    transition: 0.6s ease;
+}
+
+.login:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.fas{
+    display: inline-block;
+    margin-top: -18px;
+    margin-left: 85%;
+}
+
+.fas:hover{
+    color: #fff;
 }

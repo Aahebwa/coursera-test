@@ -6,8 +6,10 @@
 }
 
 body{
+    background-image: url(images/1.jpg);
     background-size: cover;
     background-position: center;
+    backdrop-filter: blur(3px);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -16,8 +18,11 @@ body{
 }
 
 .container{
+    background-image: url(images/1.jpg);
     background: radial-gradient(rgba(255,255,255,0.6));
     box-shadow: 5px 10px 20px rgba(0, 0, 0,0.6);
+    background-size: cover;
+    background-position: center;
     backdrop-filter: blur(20px);
     border-radius: 15px;
     padding: 30px;
@@ -52,6 +57,16 @@ ul li{
     list-style-type: none;
     font-weight: 400;
     text-transform: uppercase;
+    transition: .3s ease-in-out;
+}
+
+ul li:hover{
+    color: #fff;
+}
+
+img{
+    border-radius: 50%;
+    width: 30px;
 }
 
 section{
@@ -75,8 +90,8 @@ section{
 }
 
 .para2{
+    color: #fff;
     text-transform: uppercase;
-    color: #000;
     font-weight: bolder;
     margin: 20px 0;
 }
@@ -90,6 +105,12 @@ section{
     border-radius: 5px;
     outline: none;
     border: 1px solid #000;
+    transition: .4s ease-in-out;
+}
+
+.submit:hover{
+    background-color:#fff ;
+    color: #000
 }
 
 .icon{
@@ -98,6 +119,7 @@ section{
 }
 
 ion-icon{
+    color: #fff;
     font-size: 25px;
-    margin: 25px;
+    margin: 10px;
 }

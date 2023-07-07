@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* display: flex;
+            /* flex-wrap: wrap; 
+            width: 100%;*/
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+        } 
+
+        .child{
+            background: #000;
+            height: 200px;
+        }
+
+        table{
+            border: 2px solid #000;
+            border-collapse: collapse;
+        }
+
+        tr, td{
+            border: 2px solid #000;
+            padding: 10px;
+        }
+
+        thead tr>td{
+            font-weight: bold;
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child">child 1</div>
+        <div class="child">child 2</div>
+        <div class="child">child 3</div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>NAME</td>
+                <td>CLASS</td>
+                <td>TIME</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Timo</td>
+                <td>Arra</td>
+                <td>900</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Mrk</td>
+                <td>Art</td>
+                <td>800</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>mord</td>
+                <td>Argt</td>
+                <td>700</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <input type="dropdown" list="countries" placeholder="select country">
+    <data list="countries" id="countries">
+        <option value="Andorra"></option>
+        <option value="Algeria"></option>
+        <option value="Egypt"></option>
+        <option value="Denmark"></option>
+        <option value="Eritrea"></option>
+        <option value="Uganda"></option>
+    </data>
+</body>
+</html>

@@ -1,0 +1,15 @@
+body{
+    background: #fff;
+}
+
+#btn{
+    border: 3px solid orangered;
+    border-radius: 5px;
+    background: transparent;
+    color: orangered;
+    padding: 10px 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-transform: uppercase;
+}

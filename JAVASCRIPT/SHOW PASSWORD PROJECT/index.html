@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Password</title>
+</head>
+<body>
+    
+    <div class="container">
+        <form action="">
+            <input type="password" placeholder="Enter Password" id="input">
+            <input type="checkbox" id="checkBox"> 
+        </form>
+    </div>
+
+
+    <script>
+        
+        let userInput = document.querySelector('#input');
+        let checkBox = document.querySelector('#checkBox');
+
+        checkBox.addEventListener('change', function() {
+
+            if(checkBox.checked){
+                userInput.type = 'text';
+            }else{
+                userInput.type = 'password';
+            }
+
+        })
+
+    </script>
+</body>
+</html>

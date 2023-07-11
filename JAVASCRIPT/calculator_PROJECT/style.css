@@ -1,0 +1,60 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: cursive;
+    height: 100vh;
+}
+
+.calcContainer{
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    width: 420px;
+}
+
+input{
+    border: 2px solid #000;
+    margin: 5px auto;
+    height: 50px;
+    padding: 5px;
+    overflow: scroll;
+    text-align: right;
+    width: 400px;
+}
+
+.btnContainer{
+    /* border: 2px solid #000; */
+    width: 420px;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}
+
+.row button{
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-size: 40px;
+    padding: 5px 25px;
+    margin: 10px auto;
+}
+
+.row button:hover{
+    animation: shake .25s;
+}
+
+@keyframes shake{
+    10%{transform: rotate(15deg)};
+    20%{transform: rotate(-15deg)};
+    30%{transform: rotate(15deg)};
+    40%{transform: rotate(-15deg)};
+}

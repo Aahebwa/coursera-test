@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Calculator</title>
+  <style>
+    .container {
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>JavaScript Calculator</h2>
+    <input type="text" id="result" readonly>
+    <br>
+    <button onclick="clearResult()">C</button>
+    <button onclick="appendValue(7)">7</button>
+    <button onclick="appendValue(8)">8</button>
+    <button onclick="appendValue(9)">9</button>
+    <button onclick="appendOperator('+')">+</button>
+    <br>
+    <button onclick="appendValue(4)">4</button>
+    <button onclick="appendValue(5)">5</button>
+    <button onclick="appendValue(6)">6</button>
+    <button onclick="appendOperator('-')">-</button>
+    <br>
+    <button onclick="appendValue(1)">1</button>
+    <button onclick="appendValue(2)">2</button>
+    <button onclick="appendValue(3)">3</button>
+    <button onclick="appendOperator('*')">*</button>
+    <br>
+    <button onclick="appendValue(0)">0</button>
+    <button onclick="appendOperator('/')">/</button>
+    <button onclick="calculate()">=</button>
+  </div>
+
+  <script>
+    let currentExpression = '';
+    
+    function appendValue(value) {
+      currentExpression += value;
+      document.getElementById('result').value = currentExpression;
+    }
+    
+    function appendOperator(operator) {
+      currentExpression += operator;
+      document.getElementById('result').value = currentExpression;
+    }
+    
+    function calculate() {
+      try {
+        const result = eval(currentExpression);
+        document.getElementById('result').value = result;
+        currentExpression = '';
+      } catch (error) {
+        document.getElementById('result').value = 'Error';
+      }
+    }
+    
+    function clearResult() {
+      currentExpression = '';
+      document.getElementById('result').value = '';
+    }
+  </script>
+</body>
+</html>
+

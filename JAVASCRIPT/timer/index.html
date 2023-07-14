@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Timer</title>
+
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .childContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .clock{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="childContainer">
+            <h1>Timer</h1>
+            <!-- <form action="">
+                <input type="text" id="input" placeholder="Enter start time">
+                <input type="submit" id="submit">
+            </form> -->
+            <div class="clock">
+                <h1 id="hr">0</h1>
+                <label>:</label>
+                <h2>0</h2>
+                <label>:</label>
+                <p>0</p>
+            </div>
+            
+            <button>start</button>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

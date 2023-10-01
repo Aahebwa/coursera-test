@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    font-style: cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    border: 2px solid gold;
+    background: transparent;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: radial-gradient(rgba(255,255,255,0.6));
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    min-width: 320px;
+}
+
+form{
+    color: gold;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.inputField{
+    border: 2px solid gold;
+    background: transparent;
+    color: #fff;
+    padding: 15px;
+    margin: 5px 0;
+}
+
+input:focus{
+    outline: none;
+}
+
+.submitBtn{
+    border: 2px solid gold;
+    background: gold;
+    color: green;
+    font-weight: bolder;
+    font-size: 15px;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    text-transform: uppercase;
+    font-family: cursive;
+    transition: .3s ease-in-out;
+}
+
+.submitBtn:hover{
+    background: transparent;
+    color: #fff;
+}
+
+.signup{
+    font-size: 15px;
+    color: gold;
+    text-decoration: none;
+    text-align: right;
+}
+
+.signup:hover{
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.formHeader{
+    color: gold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.error{
+    color: red;
+}

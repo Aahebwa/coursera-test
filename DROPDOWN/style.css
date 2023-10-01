@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+header{
+    background: #005400;
+    padding: 0 50px 0 50px;
+}
+
+header ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul li{
+    color: #fff;
+    font-size: larger;
+    padding: 10px 20px;
+    margin: 5px 0;
+    text-transform: capitalize;
+    list-style-type: none;
+    transition: .3s ease;
+}
+
+header ul li:hover{
+    background: #239207;
+}
+
+.active{
+    background: #239207;
+}
+
+.sub-menu1,
+.sub-menu1-1, 
+.sub-menu2-1, 
+.sub-menu2,
+.sub-menu2-2{
+    display: none;
+}
+
+header ul li:hover .sub-menu1{
+    background: #005400;
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -15px;
+}
+
+header ul li:hover .sub-menu1 ul{
+    display: block;
+    margin: 30px;
+}
+
+.first:hover .sub-menu1-1{
+    background: #005400;
+    display: block;
+    position: absolute;
+    margin-left: 94px;
+}
+
+.sub-menu1:hover .sub-menu1-1 ul{
+    display: block;
+}
+
+.second:hover .sub-menu2{
+    background: #005400;
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -15px;
+}
+
+.second:hover .sub-menu2 ul{
+    display: block;
+    margin: 10px;
+}
+
+.third:hover .sub-menu2-1{
+    background: #005400;
+    display: block;
+    position: absolute;
+    margin-left: 190px;
+    min-width: 250px;
+}
+
+.third:hover .sub-menu2-2{
+    background: #005400;
+    display: block;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 190px;
+}

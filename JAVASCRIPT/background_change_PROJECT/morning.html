@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        var name = prompt("your Name:");
+        var date = new Date();
+        var hours = date.getHours();
+        
+        if(hours>=0 && hours<12){
+            alert("Good morning "+ name);
+        }else if(hours>=12 && hours<17){
+            alert("Good afternoon "+ name);
+        }else{
+            alert("Good evening " + name);
+        }
+
+    </script>
+</body>
+</html>

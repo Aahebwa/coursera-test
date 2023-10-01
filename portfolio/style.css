@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(#081b29, #0184ba);
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    cursor: pointer;
+}
+
+.container{
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+    background: #081b29;
+    padding-left: 80px;
+    padding-right: 80px;
+    background: radial-gradient(255, 255, 255, 0.6);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid #000;
+    backdrop-filter: blur(3px);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 0 10px 0;
+}
+
+header a{
+    color: #fff;
+    text-decoration: none;
+}
+
+div .list-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div .list-items li{
+    list-style-type: none;
+    text-transform: capitalize;
+    margin-right: 25px;
+    transition: .3s ease;
+}
+
+div .list-items li:hover{
+    color: #0184ba;
+}
+
+section{
+    margin: 100px 0 50px 0;
+    display: flex;
+}
+
+section .section-side1{
+    width: 50%;
+}
+
+.name-header{
+    text-transform: capitalize;
+    font-size: 35px;
+    color: #fff;
+}
+
+.job-header{
+    color: #0184ba;
+}
+
+.home-about{
+    color: #fff;
+    margin: 20px 0 20px 0;
+}
+
+.btn{
+    background: #0184ba;
+    border-radius: 5px;
+    color: #000;
+    padding: 3px 15px;
+    border: 2px solid #0184ba;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-right: 25px;
+    transition: .3s ease;
+}
+
+.btn:hover{
+    background: transparent;
+    color:#fff;
+}
+
+.btn2{
+    background: transparent;
+    border-radius: 5px;
+    color: #fff;
+    padding: 3px 15px;
+    border: 2px solid #0184ba;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-right: 25px;
+    transition: .3s ease;
+}
+
+.btn2:hover{
+    color: #000;
+    background: #0184ba;
+}

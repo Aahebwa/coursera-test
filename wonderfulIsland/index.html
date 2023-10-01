@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="brand">Travel</a>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">home</a>
+                <a href="#">about</a>
+                <a href="#">explore</a>
+                <a href="#">gallery</a>
+                <a href="#">contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <video class="video-slide" src="images/5.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="images/2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="images/3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="images/4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="images/1.mp4" autoplay muted loop></video>
+        <div class="content">
+            <h1>Wonderful <br> Island</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                consequatur. Delectus, id voluptatibus? Dolorum delectus quas officiis voluptas id error 
+                repudiandae iusto, eius illo, qui unde, neque amet suscipit! Vel.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae quis aperiam quod provident
+                repellendus est numquam iusto voluptatum in quas iure id 
+                pariatur ducimus aspernatur alias, mollitia omnis cumque laudantium.
+            </p>
+            <a href="#" class="readMore">read more</a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+
+    <script>
+
+        //javascript for video slider navigation
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+
+        var sliderNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i)
+            });
+        });
+
+    </script>
+</body>
+</html>

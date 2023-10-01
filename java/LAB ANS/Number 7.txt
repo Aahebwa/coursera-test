@@ -1,0 +1,9 @@
+public class Circle{
+ int x_coord, y_coord, Radius;
+double findArea(){
+}
+double findCircumference(){
+}
+double scale(){
+}
+}

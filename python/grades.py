@@ -7,7 +7,7 @@ for grade in grades:
 
 # print(gradesFiltered)
 
-# print([ grade for grade in grades if grade != 'F' ])
+print([ grade for grade in grades if grade != 'F' ])
 
 def removeFails(grade):
     return grade != 'F'

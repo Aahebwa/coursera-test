@@ -1,0 +1,2 @@
+import javax.swing.*->is used to import the javax.swing package which includes classes and components for building GUI in applications
+    can use any of the clases and components of this package without specifying the package name each time

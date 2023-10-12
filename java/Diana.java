@@ -30,7 +30,7 @@ class Car extends Vehicle {
 }
 public class Diana {
      public static void main(String[] args) {
-        Car car = new Car(brand:"Sport")
+        Car car = new Car("sport", 2023, 5);
 
         car.displayInfo();
         car.drive(); 

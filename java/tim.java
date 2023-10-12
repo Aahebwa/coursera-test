@@ -1,6 +1,6 @@
 class Animal {
     void eat() {
-        system.out.println("The animal eats food");
+        System.out.println("The animal eats food");
     }
 
 }
@@ -8,7 +8,7 @@ class Animal {
 //parent class
 class Bird extends Animal{
     void song() {
-        system.out.println("The Turkey says kolokolo");
+        System.out.println("The Turkey says kolokolo");
     }
 }
 
@@ -16,7 +16,7 @@ class Bird extends Animal{
 //child class
 class Dog extends Bird{
     void bark() {
-        system.out.println("The dog barks");
+        System.out.println("The dog barks");
     }
 }
 

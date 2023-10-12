@@ -1,6 +1,0 @@
-a) x++;
-   x+ =1;
-b i)  z= x +y;
-	x++;
-  ii) count>10?System.out.print("Count is greater
-		 than 10");

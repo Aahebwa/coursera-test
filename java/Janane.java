@@ -10,19 +10,6 @@ class Person {
         this.email = email;
     }
 
-    // getter
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
     // setter
     public void setName(String name) {
         this.name = name;
@@ -39,6 +26,21 @@ class Person {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    // getter
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    
 }
 
 public class Janane {
@@ -56,6 +58,6 @@ public class Janane {
 
         // displaying updated attributes
         System.out.println("Modified Age: " + person.getAge());
-        System.out.println("Modified Email: " + person.getEmail());
+        System.out.println("Modified Name: " + person.getName());
     }
 }

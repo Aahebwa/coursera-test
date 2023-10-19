@@ -1,3 +1,9 @@
+// GROUP MEMBERS
+// 1.MAGALA WILLY        2022/DCS/DAY/0574/G
+// 2.NAKIYINGI MOVIA     2022/DCS/DAY/0268
+// 3.TULYAHEBWA TIMOTHY  2022/DCS/DAY/0562/G
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

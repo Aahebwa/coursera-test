@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuessMyNumber</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Press Start 2P', sans-serif;
+            flex-direction: column;
+            height: 100vh;
+            color: #fff;
+            background: #000;
+            font-size: 40px;
+        }
+        .btn{
+            background: #fff;
+            border: 1px solid #fff;
+            font-size: 25px;
+            padding: 10px 18px;
+        }
+        .bottom{
+            display: flex;
+        }
+        .bott-left{
+            margin: 0 45px 0 0;
+        }
+        .score,.highscore{
+            font-size: 45px;
+        }
+        input[type="number"]{
+            background: #000;
+            border: 5px solid #fff;
+            color: #fff;
+            font-size: 60px;
+            margin: 10px 0;
+            height: 120px;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    
+    <p class="between">'Between 1 and 20'</p>
+    <button class="btn again">Again!</button>
+    <p class="guess">Guess My Number!</p>
+    <h2 class="qtn">?</h2>
+
+    <div class="bottom">
+        <div class="bott-left">
+            <input type="number" class="input"><br>
+            <button class="btn check">Check!</button>
+        </div>
+
+        <div class="bott-right">
+            <h2 class="guessing">Start guessing...</h2>
+            <h1 class="score">🤞 Score: <span class="scorer"></span></h1>
+            <h1 class="highscore">💥 Highscore: <span class="highscorer"></span></h1>
+        </div>
+        
+    </div>
+
+
+    <script>
+        document.querySelector('.scorer').innerHTML = 20;
+        document.querySelector('.highscorer').innerHTML = 0;
+
+        let score = 20;
+        let highscore = 0;
+
+        let secretNumber = Math.trunc(Math.random()*20)+1;
+
+        //function to evoke when correct score is got
+        function backgroundChange(color) {
+            document.body.style.background = color;
+        }
+
+        //function to evoke when score hits 0
+        function gameFailed() {
+            document.querySelector('.scorer').innerHTML=0;
+            document.querySelector('.qtn').innerHTML = 'You lost the game';
+            backgroundChange('red');
+        }
+
+        let that = document.querySelector('.check');
+        that.addEventListener('click', function() {
+            let input = Number(document.querySelector('.input').value);
+
+            if(!input){
+                document.querySelector('.qtn').innerHTML = '⛔ No number';
+            }else if(input == secretNumber) {
+                document.querySelector('.qtn').innerHTML = input;
+                score = document.querySelector('.scorer').innerHTML;
+                if(score > highscore){
+                    highscore = score;
+                    document.querySelector('.highscorer').innerHTML = highscore;
+                }
+                document.body.style.backgroundColor = '#60b347';
+
+                //when guess is wrong
+            }else if(input !== secretNumber) {
+                if(score > 1){
+                    document.querySelector('.qtn').innerHTML = input > secretNumber?'Too high':'Too Low';
+                    score--;
+                    document.querySelector('.scorer').innerHTML = score;
+                }else{
+                    gameFailed();
+                }
+            }
+            
+            //when guess is too high
+            // else if(input > secretNumber){
+            //     if(score > 1){
+            //         document.querySelector('.qtn').innerHTML = 'Too high';
+            //         score--;
+            //         document.querySelector('.scorer').innerHTML = score;
+            //     }else{
+            //         gameFailed();
+            //     }
+
+                //when guess is too low
+            // }else{
+            //     if(score > 1){
+            //         document.querySelector('.qtn').innerHTML = 'Too low';
+            //         score--;
+            //         document.querySelector('.scorer').innerHTML = score;
+            //     }else{
+            //         gameFailed();
+            //     }
+                
+            // }
+        })
+
+        reset = document.querySelector('.again');
+        reset.addEventListener('click', function(){
+
+            document.body.style.background = '#000';
+            score = 20;
+            document.querySelector('.scorer').innerHTML = score;
+            //document.querySelector('.highscorer').innerHTML = 0;
+            document.querySelector('.qtn').innerHTML = '?';
+            document.querySelector('.input').value = '';
+            secretNumber = Math.trunc(Math.random()*20)+1;
+
+        })
+    </script>
+</body>
+</html>

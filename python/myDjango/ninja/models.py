@@ -1,11 +1,13 @@
 from django.db import models
 
 # Create your models here.
-class Game(models.Model):
+class Article(models.Model):
     title = models.CharField(max_length=100)
-    Sport = models.TextField()
-    captain = models.TextField()
+    slug = models.SlugField()
+    body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+    # add a thumbnail later
+    # add an author later
 
     def __str__(self):
-        return self.captain
+        return self.title

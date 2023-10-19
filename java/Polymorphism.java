@@ -1,3 +1,4 @@
+//superclass
 class Shape {
     public double calculateArea() {
         return 0.0; // Default area for an unspecified shape
@@ -14,6 +15,7 @@ class Rectangle extends Shape {
         this.width = width;
     }
 
+    //method overriding 
     @Override
     public double calculateArea() {
         return length * width; // claculate the area for a rectangle

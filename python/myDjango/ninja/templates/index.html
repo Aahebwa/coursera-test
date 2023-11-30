@@ -1,14 +1,28 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'ninjaAssets/style.css' %}">
 </head>
 <body>
     
-    <h1>Food</h1>
-    <p>Is there food?</p>
+    <h1>Article list</h1>
+    <div class="articles">
+        {% for article in articles %}<!--  -->
+            <div class="article">
+                <h2><a href="{% url 'detail' slug=article.slug %}">{{ article.title }}</a></h2>
+                <p>{{ article.slug }}</p>
+                <p>{{ article.snippet }}</p>
+                <p>{{ article.date }}</p>
+                <p>{{ article.thumb }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
 
 </body>
 </html>

@@ -1,20 +1,31 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'ninjaAssets/style.css' %}">
 </head>
 <body>
+    <h1>HOME PAGE</h1>
     
-    {% if name %}
-    <h1>Hello, {{ name }}</h1>
-    <p>This is our home page!</p>
+    {% for game in games %}
 
-    {% else %}
-    <p>Hello!</p>
+        <h1><a href="#">{{ game.title }}</a></h1>
+        <p>{{ game.captain }}</p>
+        <p>{{ game.date }}</p>
+        {% if game.thumb %}
+            <img src="{{ game.thumb.url }}" alt="Thumbnail"/>
+            <!-- <p>{{ game.thumb.url }}</p> -->
+        {% endif %}
 
-    {% endif %}
+    {% endfor %}
+
+    <form action="{% url 'accounts:logout' %}"method="POST">
+        {% csrf_token %}
+        <button>Logout</button>
+    </form>
 
 </body>
 </html>

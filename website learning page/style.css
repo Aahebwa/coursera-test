@@ -109,7 +109,7 @@ ul li:hover{
     font-size: 50px;
     text-transform: capitalize;
     overflow: hidden;
-    max-width: 60%;
+    max-width: 70%;
  }
 
  .my-span{
@@ -157,9 +157,9 @@ ul li:hover{
     color: #ff7200;
     border: 1px solid transparent;
     border-radius: 7px;
-    padding: 7px 50px;
+    padding: 7px 20px;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 30px;
     text-transform: capitalize;
   }
 
@@ -195,7 +195,8 @@ ul li:hover{
   .login{
     color: #000;
     background: #ff7200;
-    padding: 7px 70px;
+    /* padding: 7px 70px; */
+    font-size: 15px;
     margin: 20px 0;
     transition: .3s ease-in-out;
   }

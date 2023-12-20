@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <h1>my victonies</h1>
+        {% for vic in victony %}
+            
+            {{ vic.title }}
+            {{ vic.slug }}
+            {{ vic.date }}
+
+        {% endfor %}
+    </body>
+</html>

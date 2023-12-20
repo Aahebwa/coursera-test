@@ -4,6 +4,7 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from .forms import CreateArticle
+from . import models
 
 # Create your views here.
 def registerView(request):
@@ -52,7 +53,8 @@ def createArticle(request):
             instance = form.save(commit=False)
             instance.author = request.user
             instance.save()
-            return render(request, 'templates/accounts/indexa.html')
+            victony = models.Victony.objects.all().order_by('date')
+            return render(request, 'templates/accounts/home.html', { 'victonys':victony })
     else: 
         form = CreateArticle()
     return render(request, 'templates/accounts/create.html', {'form':form})

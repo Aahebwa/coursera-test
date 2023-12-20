@@ -8,6 +8,12 @@
 <body>
     
     <h1>HOME PAGE!</h1>
+
+    <form action="{% url 'accounts:create' %}" method="POST">
+        {% csrf_token %}
+        <button>Create Article</button>
+    </form>
+
     <form action="{% url 'accounts:logout' %}" method="POST">
         {% csrf_token %}
         <button>Logout</button>

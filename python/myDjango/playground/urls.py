@@ -7,9 +7,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 app_name = "playground"
 
 urlpatterns = [
-    path('about/', views.about),
-    path('hello/', views.sayHello),
-    path('register/', views.register_view, name="sigup"),
+    path('about/', views.about, name="about"),
+    path('hello/', views.sayHello, name="hello"),
+    path('register/', views.register_view, name="signup"),
     path('login/', views.login_view, name="login"),
     path('create/', views.createView,name="create"),
 ]
